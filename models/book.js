@@ -1,6 +1,6 @@
 import mongoose from "mongoose";
 
-const bookModel = new mongoose.Schema({
+const bookSchema = new mongoose.Schema({
   thumbnail_url: String,
   details: {
     title: String,
@@ -23,4 +23,4 @@ const bookModel = new mongoose.Schema({
   }
 });
 
-export default bookModel;
+export default bookSchema;

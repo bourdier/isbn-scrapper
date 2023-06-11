@@ -2,8 +2,8 @@ import axios from "axios";
 import logSymbols from "log-symbols";
 import mongoose from "mongoose";
 import dotenv from "dotenv";
-import { bookModel } from "./models/book.js";
-import { isbnModel } from "./models/isbn.js";
+import { isbnSchema } from "./models/isbn.js";
+import { bookSchema } from "./models/book.js";
 dotenv.config();
 
 const database = process.env.DATABASE_URI;
@@ -13,8 +13,8 @@ mongoose.connect(database, {
   useUnifiedTopology: true,
 });
 
-const isbn = mongoose.model("isbn", isbnModel);
-const book = mongoose.model("book", bookModel);
+const isbn = mongoose.model("isbn", isbnSchema);
+const book = mongoose.model("book", bookSchema);
 
 async function process() {
   try {

@@ -1,7 +1,7 @@
 import mongoose from "mongoose";
 
-const isbnModel = new mongoose.Schema({
+const isbnSchema = new mongoose.Schema({
   isbn13: Number,
 });
 
-export default isbnModel;
+export default isbnSchema;
