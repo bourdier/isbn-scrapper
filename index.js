@@ -1,12 +1,10 @@
 import axios from "axios";
 import logSymbols from "log-symbols";
 import mongoose from "mongoose";
-import dotenv from "dotenv";
 import { ISBN } from "./models/isbn.js";
 import { Book } from "./models/book.js";
-dotenv.config();
 
-const database = process.env.DATABASE_URI;
+const database = 'URL';
 
 mongoose.connect(database, {
   useNewUrlParser: true,
