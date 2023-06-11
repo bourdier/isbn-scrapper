@@ -4,7 +4,7 @@
   "description": "Tools for scrapping book data using ISBN on OpenLibrary.org",
   "main": "index.mjs",
   "scripts": {
-    "start": "node index.mjs"
+    "start": "node index.js"
   },
   "repository": {
     "type": "git",
