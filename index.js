@@ -16,7 +16,7 @@ async function process() {
     const isbnData = await ISBN.find().lean();
 
     for (const doc of isbnData) {
-      const id = doc.isbn13;
+      const id = doc.isbn;
       const url = `https://www.googleapis.com/books/v1/volumes?q=isbn:${id}`;
       const response = await axios.get(url);
       const data = response.data;
