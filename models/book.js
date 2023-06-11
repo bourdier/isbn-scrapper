@@ -8,19 +8,21 @@ const bookSchema = new mongoose.Schema({
     publishers: [String],
     description: {
       type: String,
-      value: String
+      value: String,
     },
     publish_date: String,
     series: [String],
     identifiers: {
       amazon: [String],
     },
-    languages: [{
-      key: String
-    }],
+    languages: [
+      {
+        key: String,
+      },
+    ],
     isbn_10: [String],
     isbn_13: [String],
-  }
+  },
 });
 
 export const Book = mongoose.model("book", bookSchema);
