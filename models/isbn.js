@@ -4,4 +4,4 @@ const isbnSchema = new mongoose.Schema({
   isbn13: Number,
 });
 
-export default isbnSchema;
+export const ISBN = mongoose.model("isbn", isbnSchema);
