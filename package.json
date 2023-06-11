@@ -1,0 +1,28 @@
+{
+  "name": "isbn-scrapper",
+  "version": "1.0.0",
+  "description": "Tools for scrapping book data using ISBN on OpenLibrary.org",
+  "main": "index.mjs",
+  "scripts": {
+    "start": "node index.mjs"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bourdier/isbn-scrapper.git"
+  },
+  "keywords": [
+    "api",
+    "node",
+    "mongoose",
+    "scrap",
+    "isbn",
+    "openlibrary",
+    "books"
+  ],
+  "author": "Theo BOURDIER <theobourdier1@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/bourdier/isbn-scrapper/issues"
+  },
+  "homepage": "https://github.com/bourdier/isbn-scrapper#readme"
+}
