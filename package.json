@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "Tools for scrapping book data using ISBN on OpenLibrary.org",
   "main": "index.mjs",
+  "type": "module",
   "scripts": {
     "start": "node index.js"
   },
