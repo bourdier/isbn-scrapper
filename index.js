@@ -3,6 +3,7 @@ import logSymbols from "log-symbols";
 import mongoose from "mongoose";
 import { ISBN } from "./models/isbn.js";
 import { Book } from "./models/book.js";
+import deleteDuplicate from "./utils/deleteDuplicate.js";
 
 const database = 'URL';
 
@@ -26,6 +27,7 @@ async function process() {
     }
 
     console.log(`${logSymbols.success} All documents processed.`);
+    await deleteDuplicate();
   } catch (error) {
     console.error(logSymbols.error, error);
   }
