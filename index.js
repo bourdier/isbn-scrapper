@@ -15,7 +15,7 @@ mongoose.connect(database, {
 
 async function process() {
   try {
-    const isbnData = await isbn.find().lean();
+    const isbnData = await ISBN.find().lean();
 
     for (const doc of isbnData) {
       const id = doc.isbn13;
@@ -23,7 +23,7 @@ async function process() {
       const response = await axios.get(url);
       const data = response.data;
 
-      await book.insertMany(data);
+      await Book.insertMany(data);
       console.log(`${logSymbols.success} ${id} processed.`);
     }
 
