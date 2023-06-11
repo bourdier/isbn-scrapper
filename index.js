@@ -27,6 +27,8 @@ async function process() {
         await Book.insertMany(data);
         console.log(`${logSymbols.success} ${id} processed.`);
       }
+
+      await ISBN.findOneAndDelete({ isbn: id });
     }
 
     console.log(`${logSymbols.success} All documents processed.`);
