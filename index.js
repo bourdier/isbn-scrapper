@@ -21,8 +21,12 @@ async function process() {
       const response = await axios.get(url);
       const data = response.data;
 
-      await Book.insertMany(data);
-      console.log(`${logSymbols.success} ${id} processed.`);
+      if (data.totalItems === 0) {
+        console.log(`${logSymbols.error} ${id} not found.`);
+      } else {
+        await Book.insertMany(data);
+        console.log(`${logSymbols.success} ${id} processed.`);
+      }
     }
 
     console.log(`${logSymbols.success} All documents processed.`);
