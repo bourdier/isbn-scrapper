@@ -1,6 +1,6 @@
 # ISBN Scrapper
 
-This documentation provides information about the app and how to set it up to process data from Open Library's API and store it in a MongoDB database using Mongoose.
+This documentation provides information about the app and how to set it up to process data from Google Book's API and store it in a MongoDB database using Mongoose.
 Prerequisites
 
 Before running the app, ensure you have the following prerequisites installed:
