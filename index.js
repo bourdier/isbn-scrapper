@@ -17,7 +17,7 @@ async function process() {
 
     for (const doc of isbnData) {
       const id = doc.isbn13;
-      const url = `https://openlibrary.org/api/books?bibkeys=ISBN:${id}&jscmd=details&format=json`;
+      const url = `https://www.googleapis.com/books/v1/volumes?q=isbn:${id}`;
       const response = await axios.get(url);
       const data = response.data;
 
